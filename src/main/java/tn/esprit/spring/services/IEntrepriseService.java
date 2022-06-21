@@ -7,9 +7,9 @@ import tn.esprit.spring.entities.Entreprise;
 public interface IEntrepriseService { 
 	 
 	List<Entreprise> retrieveAllEntreprises(); 
-	Entreprise addEntreprise(Entreprise u);
-	void deleteEntreprise(String id);
-	Entreprise updateEntreprise(Entreprise u);
-	Entreprise retrieveEntreprise(String id);
+	Entreprise addEntreprise(Entreprise en);
+	void deleteEntreprise(Long id);
+	Entreprise updateEntreprise(Entreprise en);
+	Entreprise retrieveEntreprise(Long id);
 
 } 
