@@ -61,10 +61,10 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	@Override
-	public void deleteEmploye(String id) {
+	public void deleteEmploye(Long id) {
 		try {
 			l.info("In Method deleteEmploye:");
-			employeRepository.deleteById(Long.parseLong(id));
+			employeRepository.deleteById(id);
 			l.info("Out of Method deleteEmploye with Success");
 		} catch (Exception e) {
 			l.error("Out of Method deleteEmploye with Errors: " + e);
@@ -72,11 +72,11 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	@Override
-	public Employe retrieveEmploye(String id) {
+	public Employe retrieveEmploye(Long id) {
 		Employe employe = null;
 		try {
 			l.info("In Method retrieveEmploye:");
-			employe = employeRepository.findById(Long.parseLong(id)).get();
+			employe = employeRepository.findById(id).get();
 			l.info("Out of Method retrieveEmploye with Success");
 		} catch (Exception e) {
 			l.error("Out of Method retrieveEmploye with Errors: " + e);
