@@ -5,14 +5,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "T_ENTREPRISE")
 public class Entreprise implements Serializable{
 	
 	private static final long serialVersionUID = 3152690779535828408L;
@@ -21,8 +24,10 @@ public class Entreprise implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(name="name")
 	private String name;
 	
+	@Column(name="raisonSocial")
 	private String raisonSocial;
 	
 	@OneToMany(mappedBy="entreprise", 
