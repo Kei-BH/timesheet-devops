@@ -8,9 +8,9 @@ public interface IEmployeService {
 	 
 	List<Employe> retrieveAllEmployes(); 
 	Employe addEmploye(Employe e);
-	void deleteEmploye(String id);
+	void deleteEmploye(Long id);
 	Employe updateEmploye(Employe e);
-	Employe retrieveEmploye(String id);
+	Employe retrieveEmploye(Long id);
 
 } 
  
