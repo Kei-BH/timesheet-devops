@@ -5,11 +5,13 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.repositories.EmployeRepository;
 import tn.esprit.spring.services.IEmployeService;
 
+@Service
 public class EmployeServiceImpl implements IEmployeService {
 
 	@Autowired
